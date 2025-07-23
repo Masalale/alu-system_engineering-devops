@@ -11,11 +11,7 @@ echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
 # Configure the redirect using sed
 # This command finds the line with 'listen 80 default_server;' and inserts
 # the redirect configuration for /redirect_me on the next line.
-# The '\' before the newline is important for sed's 'a' (append) command.
-sudo sed -i '/listen 80 default_server/a \
-\    location /redirect_me { \
-\        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; \
-\    }' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server/a \    location /redirect_me { \\\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; \\\n\t}' /etc/nginx/sites-available/default
 
 # Restart Nginx to apply the changes
 sudo service nginx restart
