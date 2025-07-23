@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found - Lost in Space</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #0f0c29;
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0077ff, 0 0 40px #0077ff, 0 0 50px #0077ff, 0 0 60px #0077ff, 0 0 70px #0077ff;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            font-weight: 300;
+        }
+        
+        .subtext {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            border: 2px solid #ffffff;
+            border-radius: 50px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .home-link:hover {
+            background-color: #ffffff;
+            color: #0f0c29;
+            transform: scale(1.05);
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px #0077ff,
+                0 0 80px #0077ff,
+                0 0 90px #0077ff,
+                0 0 100px #0077ff,
+                0 0 150px #0077ff;
+            }
+            20%, 24%, 55% {        
+                text-shadow: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! It seems you're lost in the digital cosmos.</p>
+        <p class="subtext">Ceci n'est pas une page.</p>
+        <a href="/" class="home-link">Go Back Home</a>
+    </div>
+</body>
+</html>

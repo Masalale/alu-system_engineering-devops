@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script installs and configures Nginx on a new Ubuntu machine.
+
+# Update package lists
+sudo apt-get update -y
+
+# Install Nginx
+sudo apt-get install nginx -y
+
+# Create a custom index.html file
+# This will overwrite the default Nginx page
+echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
+
+# Restart Nginx to apply the changes
+# Using 'service' as 'systemctl' is not allowed
+sudo service nginx restart
+
+exit 0
