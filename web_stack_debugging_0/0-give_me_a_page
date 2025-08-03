@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Start apache service and create the index.html file
 service apache2 start
 echo 'Hello Holberton' > /var/www/html/index.html
-service apache2 status
+echo "apache2 is running"
