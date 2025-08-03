@@ -2,4 +2,4 @@
 # Start apache service and create the index.html file
 service apache2 start
 echo 'Hello Holberton' > /var/www/html/index.html
-echo "Hello Holberton"
+echo "apache2 is running"
